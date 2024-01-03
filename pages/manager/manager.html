@@ -1,0 +1,65 @@
+<div class="header__top"  style="background-image: url(/template/img/sec.png);">
+	{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+	<div class="managers">
+		<div class="managers__list">
+			<div class="managers__wrap" style="background-color: rgba(255, 255, 255, 0.877); border-radius: 60px; padding: 100px; margin-bottom: 10px;">
+				<div class="managers__center">
+					<div class="manager__img">
+						<img src="https://webart.work{{{agent.thumb}}}" alt="" style="width: 600px; border-radius: 120px; padding: 15px; background-image: url(/template/img/welcome.png);">
+					</div>
+					<h2 class="managers__title" style="color: black;">
+						{{{agent.name}}}
+					</h2>
+					{% if agent.data.phone %}
+					<div class="managers__title" style="color: black;">
+						<a href="tel:{{{agent.data.phone}}}">{{{agent.data.phone}}}</a>
+					</div>
+					{% endif %}
+					<div class="footer__wrap-links">
+						{% if agent.data.instagram || agent.data.facebook || agent.data.telegram || agent.data.viber %}
+						<a href="{{{agent.data.viber}}}" class="footer__btn">
+							<img src="/template/img/icons/vibers.svg" alt="" />
+						</a>
+						<a href="{{{agent.data.telegram}}}" target="_blank" class="footer__btn ">
+							<img src="/template/img/icons/telegram.svg" alt="" />
+						</a>
+						<a href="{{{agent.data.facebook}}}" class="footer__btn ">
+							<img src="/template/img/icons/facebook.svg" alt="" />
+						</a>
+						<a href="{{{agent.data.instagram}}}" target="_blank" class="footer__btn ">
+							<img src="/template/img/icons/instagram.svg" alt="" />
+						</a>
+						{% endif %}
+					</div>
+					<div class="managers__right_text" style="text-align: left; font-weight: 500;">
+						{% for experience in experiences %}
+						{% if agent.data['6526cc407baddf0a69ef5cda' + experience._id] && experience.nameua %}
+						<span title="{{{experience.descriptionua}}}">
+							<b>{{{experience.nameua}}} </b>
+							{% if experience.priceuah %}
+							<span>{{{experience.priceuah}}} грн/міс.</span>
+							{% endif %}
+							{% if experience.pricehourlyuah %}
+							<span>{{{experience.pricehourlyuah}}} грн/год.</span>
+							{% endif %}
+							{% if experience.priceonceuah %}
+							<span>{{{experience.priceonceuah}}} грн</span>
+							{% endif %}
+						</span>
+
+						<div class="managers__description" style="padding-bottom: 15px;">
+							{{{agent.data['6526cc407baddf0a69ef5cda' + experience._id]}}}
+						</div>
+						{% endif %}
+						{% endfor %}
+						<br/>
+						<a href="/managers" style="padding: 10px; color: aliceblue; background-image: url(/template/img/welcome.png); border-radius: 15px;">Всі менеджери</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>

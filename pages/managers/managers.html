@@ -1,0 +1,83 @@
+<div class="header__top">
+			{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+				<div class="managers">
+						<div class="article__img">
+							<img src="/template/img/animegg.jpg" alt="" />
+						</div>
+						<div class="article__title">Онлайн менеджери</div>
+						<div class="article__description">
+							<h1>Звітайте у світ успішних бізнес-агентів нерухомості,</h1>
+
+							<p> де кожен член — це ключовий гравець у створенні історії успіху. Наша ексклюзивна
+								спільнота — це не просто об'єднання фахівців, це відкритий простір для ваших ідей,
+								амбіцій та досягнень.
+								Що ви отримаєте учасництвом у нашій спільноті?
+								Повний Спектр Послуг: наша команда експертів готова надати вам інтегрований підхід до
+								розвитку вашого агентства. Від реклами та маркетингу до розробки франшизи — ми покриємо
+								всі аспекти вашого бізнесу.</p>
+
+							<h3>З повагою, команда Neryxomka</h3>
+						</div>
+						<div class="managers__list">
+							{% for agent in agents %}
+							<div class="managers__wrap">
+								<div class="managers__left">
+									<a href="/manager/{{{agent._id}}}">
+									<div class="managers__img">
+										<img src="https://webart.work{{{agent.thumb}}}" alt="">
+									</div>
+									<div class="managers__title">
+										{{{agent.name}}}
+									</div>
+								</a>
+									{% if agent.data.phone %}
+									<div class="managers__title">
+										<a href="tel:{{{agent.data.phone}}}">{{{agent.data.phone}}}</a>
+									</div>
+									{% endif %}
+									<div class="footer__wrap-links">
+										{% if agent.data.instagram || agent.data.facebook || agent.data.telegram || agent.data.viber %}
+									<a href="{{{agent.data.viber}}}" class="footer__btn">
+										<img src="/template/img/icons/vibers.svg" alt=""/>
+									</a>
+									<a href="{{{agent.data.telegram}}}" target="_blank" class="footer__btn ">
+										<img src="/template/img/icons/telegram.svg" alt="" />
+									</a>
+									<a href="{{{agent.data.facebook}}}" class="footer__btn ">
+										<img src="/template/img/icons/facebook.svg" alt="" />
+									</a>
+									<a href="{{{agent.data.instagram}}}" target="_blank" class="footer__btn ">
+										<img src="/template/img/icons/instagram.svg" alt="" />
+									</a>
+									{% endif %}
+								</div>
+								</div>
+								<div class="managers__right">
+									{% for experience in agent.experiences %}
+									<span title="{{{experience.descriptionua}}}">
+										<b>{{{experience.nameua}}} </b>
+										{% if experience.priceuah %}
+										<span>{{{experience.priceuah}}} грн/міс.</span>
+										{% endif %}
+										{% if experience.pricehourlyuah %}
+										<span>{{{experience.pricehourlyuah}}} грн/год.</span>
+										{% endif %}
+										{% if experience.priceonceuah %}
+										<span>{{{experience.priceonceuah}}} грн</span>
+										{% endif %}
+									</span>
+
+									<div class="managers__description" style="padding-bottom: 15px;">
+										{{{experience.agentDescription}}}
+									</div>
+									{% endfor %}
+								</div>
+							</div>
+							<hr>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+		</div>
+{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>

@@ -1,0 +1,30 @@
+<div class="main__sidebar-wrap">
+	<div class="main__sidebar">
+		<div class="main__heading">
+			{% for category in categories %}
+			<div class="main__heading-item">
+				<div class="main__heading-name">
+					<div class="main__heading-img">
+
+					</div>
+					<div class="main__heading-text">
+						{{{category.name}}}
+					</div>
+					<div class="main__heading-arrow">
+						<svg width="15" height="24" viewBox="0 0 15 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 1.455L1.61719 0L15 12L1.61719 24L0 22.5525L11.7578 12L0 1.455Z" fill="#ffffff" />
+						</svg>
+					</div>
+				</div>
+				<ul class="main__heading-answer">
+					{% for tag in category.tags %}
+					<li>
+						<a href="/{{{module}}}/{{{tag.id|string}}}">— {{{tag.name}}}</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,163 @@
+{
+	"title": "Cool Title",
+	"store": {
+		"telegram": "https://t.me/wawceo"
+	},
+	"top_portfolios": [
+		{
+			"id": "/portfolio",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "portfolio"
+		},
+		{
+			"id": "/portfolio",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "portfolio"
+		},
+		{
+			"id": "/portfolio",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "portfolio"
+		}
+	],
+	"portfolios": [
+		{
+			"id": "/portfolio",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"thumbs": ["https://neryxomka.com/template/img/welcome.png"],
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"name": "portfolio"
+		},
+		{
+			"id": "/portfolio",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"thumbs": ["https://neryxomka.com/template/img/welcome.png"],
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"name": "portfolio"
+		},
+		{
+			"id": "/portfolio",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"thumbs": ["https://neryxomka.com/template/img/welcome.png"],
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"name": "portfolio"
+		},
+		{
+			"id": "/portfolio",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"thumbs": ["https://neryxomka.com/template/img/welcome.png"],
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"name": "portfolio"
+		}
+	],
+	"products": [
+		{
+			"id": "/product",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "product"
+		},
+		{
+			"id": "/product",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "product"
+		},
+		{
+			"id": "/product",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "product"
+		}
+	],
+	"services": [
+		{
+			"id": "/service",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "service"
+		},
+		{
+			"id": "/service",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "service"
+		},
+		{
+			"id": "/service",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "service"
+		}
+	],
+	"articles": [
+		{
+			"id": "/article",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "article"
+		},
+		{
+			"id": "/article",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "article"
+		},
+		{
+			"id": "/article",
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "article"
+		}
+	],
+	"realestates": [
+		{
+			"id": "realestate",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "product"
+		},
+		{
+			"id": "realestate",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "product"
+		},
+		{
+			"id": "realestate",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "product"
+		}
+	],
+	"stores": [
+		{
+			"name": "Title of article",
+			"short": "Short Description",
+			"thumb": "/template/img/articles.png",
+			"url": "/article"
+		},
+		{
+			"name": "Title of article",
+			"short": "Short Description",
+			"thumb": "/template/img/articles.png",
+			"url": "/article"
+		}
+	]
+}

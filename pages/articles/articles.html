@@ -1,0 +1,78 @@
+<script type="module">
+	import Article from '/api/wjst/article';
+	import Dom from '/api/wjst/dom';
+	Article.perPage = 10;
+	let page = 1;
+
+	if ((await Article.page(1)).length < Article.perPage) {
+		Dom.remove('loadArticles');
+	}
+
+	document.getElementById('loadArticles').addEventListener('click', async () => {
+		page++;
+		const articles = await Article.page(page);
+
+		if (articles.length < Article.perPage) {
+			Dom.remove('loadArticles');
+		}
+		for (const article of articles) {
+			if (!article.thumbs) {
+				article.thumbs = [];
+			}
+			Dom.add('articles', Dom.template('article', {
+				thumb: article.thumb,
+				thumbs: article.thumbs.map(thumb => {
+					return Dom.template('article_thumb', {
+						name: article.name,
+						thumb
+					})
+				}),
+				name: article.name,
+				_id: article._id,
+				short: article.short,
+				description: article.description
+			}));
+		}
+	});
+</script>
+
+
+<div class="wrapper">
+	<div class="content">
+		<div class="header__top">
+			{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+			<section class="articles">
+				<div class="container">
+					<div class="articles__main-title global-title">{{{translate("Land.ARTICLES")}}}</div>
+					<div class="articles__list" id="articles">
+						{% for article in articles %}
+						<a class="articles__wrap" href="/article/{{{article.url || article.id}}}">
+							<div class="articles__item">
+								<div class="articles__img">
+									<img src="{{{article.thumb}}}" alt="" />
+								</div>
+								<div class="articles__title">{{{article.name}}}</div>
+								<div class="articles__description">{{{article.short}}}</div>
+							</div>
+						</a>
+						{% endfor %}
+					</div>
+					<button class="load-more" id="loadArticles" style="background-color: rgb(23, 59, 89); padding: 20px; border-radius: 10px; color:white; font-weight: 600; margin: 0 auto; display: block;">Load more</button>
+				</div>
+			</section>
+		</div>
+	</div>
+	{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>
+
+<div id="template-article" style="display: none;"> 
+	<a class="articles__wrap" href="/article/{_id}">
+		<div class="articles__item">
+			<div class="articles__img">
+				<img src="{thumb}" alt="" />
+			</div>
+			<div class="articles__title">{name}</div>
+			<div class="articles__description">{short}</div>
+		</div>
+	</a>
+	</div>

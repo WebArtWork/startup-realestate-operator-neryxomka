@@ -1,0 +1,10 @@
+{
+	"name": "product",
+	"product": {
+		"id": "/product",
+		"price": 1200,
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+		"thumb": "https://neryxomka.com/template/img/welcome.png",
+		"name": "product"
+	}
+}

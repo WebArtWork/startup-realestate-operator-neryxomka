@@ -1,0 +1,75 @@
+<div class="wrapper">
+	<div class="content">
+		<div class="header__top header__top">
+			{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+				<div class="container">
+								<div id="page" class="estate__wrap">
+									<div class="estate__slider">
+										<div class="column small-11 small-centered">
+											<div class="slider-for">
+												<div class="estate__slider-main"><img src="{{{realestate.thumb}}}" alt=""></div>
+												{% for thumb in realestate.thumbs %}
+												<div class="estate__slider-main"><img src="{{{thumb}}}" alt=""></div>
+												{% endfor %}
+											</div>
+											<div class="slider-navV">
+												<div class="estate__slider-nav-photo"><img src="{{{realestate.thumb}}}" alt=""></div>
+												{% for thumb in realestate.thumbs %}
+												<div class="estate__slider-nav-photo"><img src="{{{thumb}}}" alt=""></div>
+												{% endfor %}
+											</div>
+										</div>
+									</div>
+									<div class="estate__info">
+										<div class="estate__title">
+											{{{realestate.name}}}
+										</div>
+										<pre class="estate__description">{{{realestate.description}}}</pre>
+										<!-- <div class="estate__details-wrap">
+											<div class="estate__details-item">
+												<div class="estate__details-img">
+													<img src="/template/img/icons/area.svg" alt="">
+												</div>
+												<div class="estate__details-text">
+													12312321312
+												</div>
+											</div>
+											<div class="estate__details-item">
+												<div class="estate__details-img">
+													<img src="/template/img/icons/price.svg" alt="">
+												</div>
+												<div class="estate__details-text">
+													12312321312
+												</div>
+											</div>
+											<div class="estate__details-item">
+												<div class="estate__details-img">
+													<img src="/template/img/icons/locb.svg" alt="">
+												</div>
+												<div class="estate__details-text">
+													12312321312
+												</div>
+											</div>
+											<div class="estate__details-item">
+												<div class="estate__details-img">
+													<img src="/template/img/icons/floor.svg" alt="">
+												</div>
+												<div class="estate__details-text">
+													12312321312
+												</div>
+											</div>
+										</div>
+										<div class="estate__btn">
+											<a href="" class="product__btn-cart">
+												<img src="/template/img/icons/cart.svg" alt="">
+												<span>ADD TO CART</span>
+											</a>
+										</div> -->
+									</div>
+								</div>
+				</div>
+		</div>
+
+	</div>
+	{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>

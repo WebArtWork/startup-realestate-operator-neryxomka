@@ -1,0 +1,39 @@
+<div class="wrapper">
+	<div class="content">
+		<div class="header__top">
+			{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+			<section class="article">
+				<div class="container">
+					<div class="article__wrap">
+						<div class="article__img">
+							<img src="{{{article.thumb}}}" alt="" />
+						</div>
+						<div class="article__title">{{{article.name}}}</div>
+						<pre class="article__description">{{{article.description|safe}}}</pre>
+						{% if article.reference %}
+						<a href="{{{article.reference}}}">
+							Reference {{{article.reference}}}
+						</a>
+						{% endif %}
+					</div>
+					<div class="article__similar-list">
+						{% for art in articles %}
+						<a href="/article/{{{art.id}}}" class="article__similar-wrap">
+							<div class="article__similar-item">
+								<div class="article__similar-img">
+									<img src="{{{art.thumb}}}" alt="" />
+								</div>
+								<div class="article__similar-title">
+									{{{art.name}}}
+								</div>
+								<pre class="article__similar-description">{{{art.short}}}</pre>
+							</div>
+						</a>
+						{% endfor %}
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>

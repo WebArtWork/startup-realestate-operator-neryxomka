@@ -1,0 +1,12 @@
+{
+	"name": "portfolio",
+	"portfolio": {
+		"id": "portfolio",
+		"thumb": "https://neryxomka.com/template/img/welcome.png",
+		"thumbs": [
+			"https://neryxomka.com/template/img/welcome.png"
+		],
+		"name": "portfolio",
+		"short": "short"
+	}
+}

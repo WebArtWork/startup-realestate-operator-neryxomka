@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{{{title}}}</title>
+	<meta itemprop="name" content="{{{title}}}" />
+	<meta name="twitter:title" content="{{{title}}}" />
+	<meta property="og:title" content="{{{title}}}" />
+
+	<meta name="description" content="{{{description}}}" />
+	<meta itemprop="description" content="{{{description}}}" />
+	<meta name="twitter:description" content="{{{description}}}" />
+	<meta property="og:description" content="{{{description}}}" />
+
+	<meta itemprop="image" content="{{{image}}}" />
+	<meta name="twitter:image:src" content="{{{image}}}" />
+	<meta property="og:image" content="{{{image}}}" />
+
+	<base href="/" />
+	<link rel="icon" type="image/x-icon" href="/template/img/logo.png" />
+	<link rel="stylesheet" type="text/css" href="/template/libs/slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="/template/libs/slick/slick-theme.css" />
+	<link rel="stylesheet" href="/template/css/index.css" />
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7NY6D0LJQ7"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "G-7NY6D0LJQ7");
+	</script>
+	
+	<style>
+		:root {
+			--primary_color: {{{variables.primary_color || "white"}}};
+		}
+
+		.welcome__form-btn{
+			color: var(--primary_color);
+		}
+		
+		</style>
+</head>
+
+<body>
+	<!-- HTML -->
+	<script type="text/javascript" src="/template/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/template/libs/slick/slick.min.js"></script>
+	<script src="/template/js/index.js"></script>
+	<script type="text/javascript"></script>
+	<script>
+		<!-- JS -->
+	</script>
+	<!-- <div id="spinner" style="
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999999999999999999999999;
+      "></div> -->
+	<script>
+		window.onload = function () {
+			window.scrollTo(0, 0);
+
+			document.getElementById("spinner").remove();
+		};
+		function setSrc(id, src) {
+			document.getElementById(id).src = src;
+		}
+	</script>
+</body>
+
+</html>

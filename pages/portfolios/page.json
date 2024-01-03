@@ -1,0 +1,29 @@
+{
+	"name": "portfolios",
+	"portfolios": [
+		{
+			"id": "portfolio",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "portfolio",
+			"short": "short"
+		},
+		{
+			"id": "portfolio",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "portfolio",
+			"short": "short"
+		},
+		{
+			"id": "portfolio",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "portfolio",
+			"short": "short"
+		},
+		{
+			"id": "portfolio",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"name": "portfolio",
+			"short": "short"
+		}
+	]
+}

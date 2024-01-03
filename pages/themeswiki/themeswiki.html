@@ -1,0 +1,93 @@
+<div class="wrapper">
+	<div class="content">
+		<div class="header__top">
+			{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+			<section class="article">
+				<div class="container">
+					<div class="article__wrap">
+						<div class="article__img">
+							<img src="/template/img/furniture/wiki.png" alt="" />
+						</div>
+						<div class="article__title">{{{translate("Wiki.Neryxomka Wiki")}}}</div>
+						<div class="wiki__list">
+							<div class="wiki__wrap">
+								<div class="wiki__text">
+									<div class="wiki__title">{{{translate("Wiki.How to use Neryxomka")}}}</div>
+									<div class="wiki__description">
+										{{{translate("Wiki.Customer Relationship Management (CRM) is a powerful tool for efficient business management and communication with your customers. It allows you to change the design theme, create articles, categories, and showcase real estate for sale or rent, as well as offer services and products. To use CRM and perform these actions, follow these steps:")}}}
+									</div>
+									<ul class="wiki__lists">
+										<li onclick="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/1.jpg')" onmouseover="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/1.jpg')">
+											<div class="wiki__lists-img"></div>
+											<div class="wiki__lists-text">
+												{{{translate("Wiki.Log in to the CRM administrator panel. Usually, it can be accessed through a web browser using a specific URL.")}}}
+											</div>
+										</li>
+										<li onclick="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/3.jpg')" onmouseover="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/3.jpg')">
+											<div class="wiki__lists-img"></div>
+											<div class="wiki__lists-text">
+												{{{translate("Wiki.Create articles. Find the appropriate section in CRM for creating content and adding articles. Use the text editor to create and format articles according to your needs.")}}}
+											</div>
+										</li>
+										<li onclick="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/5.jpg')" onmouseover="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/5.jpg')">
+											<div class="wiki__lists-img"></div>
+											<div class="wiki__lists-text">
+												{{{translate("Wiki.Showcase real estate. Utilize the feature for adding real estate in CRM. Fill in the necessary information about the properties you are selling or renting, including photos, descriptions, and specifications.")}}}
+											</div>
+										</li>
+										<li onclick="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/6.jpg')" onmouseover="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/6.jpg')">
+											<div class="wiki__lists-img"></div>
+											<div class="wiki__lists-text">
+												{{{translate("Wiki.Present services and products. Create a separate section in CRM where you can add and describe the services your business offers as well as the products you sell. Include detailed descriptions, photos, prices, and any additional information that will help attract customers.")}}}
+											</div>
+										</li>
+										<li onclick="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/7.jpg')" onmouseover="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/7.jpg')">
+											<div class="wiki__lists-img"></div>
+											<div class="wiki__lists-text">
+												{{{translate("Wiki.Display portfolio with descriptions. If you have a portfolio of works or projects, create a dedicated section or page where you can showcase your portfolio. Add descriptions of each project, photos, or videos to demonstrate your skills and achievements to potential clients.")}}}
+											</div>
+										</li>
+										<li onclick="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/8.jpg')" onmouseover="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/8.jpg')">
+											<div class="wiki__lists-img"></div>
+											<div class="wiki__lists-text">
+												{{{translate("Wiki.Write articles on current topics. Utilize CRM's capabilities to create and publish articles on current topics in your industry. Research trends and news related to your business and share valuable information with your readers. Establish a regular publishing schedule to engage your audience and maintain their interest.")}}}
+											</div>
+										</li>
+										<li onclick="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/9.jpg')" onmouseover="setSrc('furniture_order', '/template/img/wiki/neryxomka/basic/9.jpg')">
+											<div class="wiki__lists-img"></div>
+											<div class="wiki__lists-text">
+												{{{translate("Wiki.Showcase stores and their specialization. If you have stores or physical locations where you sell goods, use CRM to create separate pages for each store. Provide information about the location, working hours, and the main products or services available at each store.")}}}
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="wiki__img">
+									<img id="furniture_order" src="/template/img/wiki/neryxomka/basic/1.jpg" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="article__similar-list">
+						{% for article in articles %}
+						<div class="article__similar-wrap">
+							<div class="article__similar-item">
+								<div class="article__similar-img">
+									<img src="{{{article.thumb}}}" alt="" />
+								</div>
+								<div class="article__similar-title">{{{article.name}}}</div>
+								<div class="article__similar-description">
+									{{{article.short}}}
+									<a href="{{{article.url}}}" class="article__similar-link">
+										{{{translate("Wiki.Read more...")}}}
+									</a>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>

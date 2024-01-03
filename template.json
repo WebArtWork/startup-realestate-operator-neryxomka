@@ -1,0 +1,23 @@
+{
+	"title": "Welcome to waw Template",
+	"description": "description",
+	"keywords": "keywords",
+	"prefix": "/template",
+	"picture": "picture",
+	"author": "author",
+	"variables": {
+		"primary_color": "white"
+	},
+	"moderators": [],
+	"scss": "scss/index.scss",
+	"categories": [
+		{
+			"name": "Category",
+			"tags": [
+				{
+					"name": "Tag"
+				}
+			]
+		}
+	]
+}

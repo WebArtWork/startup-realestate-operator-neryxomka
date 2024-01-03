@@ -1,0 +1,19 @@
+{
+	"name": "team",
+	"agents": [
+		{
+			"name": "Honchar Denys",
+			"thumb": "/api/user/image/63b9245ff9e925059d9ef676.jpg?1685462740871",
+			"data": {
+				"6526cc407baddf0a69ef5cda_1": "job description 1",
+				"6526cc407baddf0a69ef5cda_2": "job description 2"
+			}
+		}
+	],
+	"experiences": {
+		"_id": "_1",
+		"nameua": "job title 1",
+		"descriptionua": "job description 1",
+		"priceuah": 500
+	}
+}

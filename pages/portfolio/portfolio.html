@@ -1,0 +1,25 @@
+<div class="wrapper">
+	<div class="content">
+		<div class="header__top">
+			{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+			<section class="article">
+				<div class="container">
+					
+					<div class="article__wrap">
+						<div class="slider__list">
+							{% for thumb in portfolio.thumbs %}
+							<div class="slider__item">
+								<img src="{{{portfolio.thumb}}}" alt="{{{portfolio.name}}}" />
+							</div>
+							<div><img src="{{{thumb}}}" alt="" /></div>
+							{% endfor %}
+						</div>
+						<div class="article__title">{{{portfolio.name}}}</div>
+						<div class="article__description">{{{portfolio.description|safe}}}</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>

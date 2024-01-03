@@ -1,0 +1,31 @@
+<div class="wrapper">
+	<div class="content">
+		<div class="header__top">
+			{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+			<section class="articles">
+				<div class="container">
+					<div class="articles__main-title global-title">{{{translate("Land.STORES")}}}</div>
+					<div class="articles__list">
+						{% for store in stores %}
+						<a class="articles__wrap" href="/store/{{{store.url || store.id}}}">
+							<div class="articles__item">
+								<div class="articles__img">
+									<img src="{{{store.thumb}}}" alt="" />
+								</div>
+								<div class="articles__title">{{{store.name}}}</div>
+								<div class="articles__description">
+									{{{store.short}}}
+								</div>
+								<div class="articles__description">
+									{{{store.website}}}
+								</div>
+							</div>
+						</a>
+						{% endfor %}
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>

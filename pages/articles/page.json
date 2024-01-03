@@ -1,0 +1,15 @@
+{
+    "articles": [{
+            "name": "Title of article",
+            "short": "Short Description",
+			"thumb": "/template/img/articles.png",
+            "url": "/article"
+        },
+        {
+            "name": "Title of article",
+            "short": "Short Description",
+			"thumb": "/template/img/articles.png",
+            "url": "/article"
+        }
+    ]
+}

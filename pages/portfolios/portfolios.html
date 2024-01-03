@@ -1,0 +1,99 @@
+<script type="module">
+	import Portfolio from "/api/wjst/portfolio";
+	import Dom from "/api/wjst/dom";
+	Portfolio.perPage = 10;
+	let page = 1;
+
+	if ((await Portfolio.page(1)).length < Portfolio.perPage) {
+		Dom.remove("loadPortfolios");
+	}
+
+	document
+		.getElementById("loadPortfolios")
+		.addEventListener("click", async () => {
+			page++;
+			const portfolios = await Portfolio.page(page);
+
+			if (portfolios.length < Portfolio.perPage) {
+				Dom.remove("loadPortfolios");
+			}
+			for (const portfolio of portfolios) {
+				if (!portfolio.thumbs) {
+					portfolio.thumbs = [];
+				}
+				Dom.add(
+					"portfolios",
+					Dom.template("portfolio", {
+						thumb: portfolio.thumb,
+						thumbs: portfolio.thumbs.map((thumb) => {
+							return Dom.template("portfolio_thumb", {
+								name: portfolio.name,
+								thumb,
+							});
+						}),
+						name: portfolio.name,
+						_id: portfolio._id,
+						short: portfolio.short,
+						description: portfolio.description
+					})
+				);
+			}
+		});
+</script>
+<div class="wrapper">
+	<div class="content">
+		<div class="header__top">
+			{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+			<section class="articles">
+				<div class="container">
+					<div class="articles__main-title global-title">
+						Роботи
+					</div>
+					<div class="articles__list" id="portfolios">
+						{% for portfolio in portfolios %}
+						<a
+							class="articles__wrap"
+							href="/portfolio/{{{portfolio.url || portfolio.id}}}"
+						>
+							<div class="articles__item">
+								<div class="articles__img">
+									<img src="{{{portfolio.thumb}}}" alt="" />
+								</div>
+								<div class="articles__title">
+									{{{portfolio.name}}}
+								</div>
+								<div class="articles__description">
+									{{{portfolio.short}}}
+								</div>
+							</div>
+						</a>
+						{% endfor %}
+					</div>
+					<button
+						class="load-more" id="loadPortfolios"style="background-color: rgb(23, 59, 89);
+							padding: 10px;
+							border-radius: 10px;
+							color:white;
+							font-weight: 600;
+							margin: 0 auto;
+							display: block;"
+					>
+						Load more
+					</button>
+				</div>
+			</section>
+		</div>
+	</div>
+	{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>
+<div id="template-portfolio" style="display: none">
+	<a class="articles__wrap" href="/portfolio/{_id}">
+		<div class="articles__item">
+			<div class="articles__img">
+				<img src="{thumb}" alt="" />
+			</div>
+			<div class="articles__title">{name}</div>
+			<div class="articles__description">{short}</div>
+		</div>
+	</a>
+</div>

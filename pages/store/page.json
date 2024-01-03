@@ -1,0 +1,8 @@
+{
+	"name": "store",
+	"article": {
+		"name": "article",
+		"description": "HTML Description",
+		"thumb": "/template/img/articles.png"
+	}
+}

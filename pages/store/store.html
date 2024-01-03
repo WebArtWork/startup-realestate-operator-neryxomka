@@ -1,0 +1,21 @@
+<div class="wrapper">
+	<div class="content">
+		<div class="header__top">
+			{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+			<section class="article">
+				<div class="container">
+					<div class="article__wrap">
+						<div class="article__img">
+							<img src="{{{store.thumb}}}" alt="" />
+						</div>
+						<div class="article__title">{{{store.name}}}</div>
+						<div class="article__description">
+							{{{store.description|safe}}}
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>

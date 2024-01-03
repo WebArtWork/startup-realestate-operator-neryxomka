@@ -1,0 +1,322 @@
+<div class="wrapper">
+	<div class="content">
+		<div class="first-screen header__top">
+			{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+			<section class="welcome">
+				<div class="welcome__circle-first">
+					<img src="template/img/circle.png" class="circle-anim" alt="">
+					<div class="welcome__circle-second">
+						<img src="template/img/circle.png" class="circle-anim-second" alt="">
+					</div>
+				</div>
+				<div class="container">
+					<div class="welcome__title">
+						{{{translate("Land.NERYXOMKA")}}}
+					</div>
+					<div class="welcome__description">
+						{{{translate("Land.Discover the power of real estate with Neryxomka - the one-stop platform for all your buying, selling, renting, trading, and auctioning needs. Our brand, Neryxomka, is dedicated to providing a comprehensive solution for all your real estate requirements. Whether you're searching for your perfect home, looking to sell a property, or interested in renting out a space, Neryxomka has got you covered. We also offer a range of services to help you build and fix your properties, so you can maximize your investment. With Neryxomka, you can easily access the history of a property and make informed decisions. Plus, you can buy all the materials you need for your construction and repair projects right here on our platform. Experience the future of real estate with Neryxomka today!")}}}
+					</div>
+					<div class="welcome__form">
+						<input type="search" placeholder="Find some real estates">
+						<div class="welcome__form-btn">
+							<button>
+								{{{translate("Land.FIND REAL ESTATES")}}}
+							</button>
+						</div>
+						<div class="welcome__form-icon">
+							<img src="/template/img/icons/find.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<section class="services">
+			<div class="container">
+				<div class="services__main-title global-title">
+					{{{translate("Land.OUR")}}} <span>{{{translate("Land.SERVICES")}}}</span>
+				</div>
+				<div class="services__list">
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/1.svg" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Property listing and search")}}}
+							</div>
+							<div class="services__description">
+								{{{translate("Land.Users can list their properties for sale, rent, trade, or auction, and search for properties that meet their criteria.")}}}
+							</div>
+						</div>
+					</div>
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/6.svg" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Legal support")}}}
+							</div>
+							<div class="services__description">
+								{{{translate("Land.The platform may provide legal support to users, including advice on contracts, zoning laws, and other real estate-related legal matters.")}}}
+							</div>
+						</div>
+					</div>
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/7.svg" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Marketing and promotion")}}}
+							</div>
+							<div class="services__description">
+								{{{translate("Land.The platform offer marketing and promotion services to help users market their properties to potential buyers or renters.")}}}
+							</div>
+						</div>
+					</div>
+					<div class="services__wrap">
+						<div class="services__item">
+							<div class="services__img">
+								<img src="template/img/services/8.svg" alt="">
+							</div>
+							<div class="services__title">
+								{{{translate("Land.Virtual tours")}}}
+							</div>
+							<div class="services__description">
+								{{{translate("Land.The platform offer virtual tour services to allow users to take a virtual walk through a property from the comfort of their own home, helping them get a better understanding of the property before making a decision.")}}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="about-us">
+			<div class="about-us__img">
+				<img src="/template/img/about.png" alt="">
+			</div>
+			<div class="container">
+				<div class="about-us__title global-title">
+					{{{translate("Land.ABOUT")}}} <span>{{{translate("Land.US")}}}</span>
+				</div>
+				<div class="about-us__description">
+					<p>
+						{{{translate("Land.Meet the talented and dedicated team behind Neryxomka, the real estate platform that is changing the way people buy, sell, rent, and invest in properties. Our team is made up of experts in the real estate industry, technology, and customer service, all working together to provide a seamless and enjoyable experience for our users.")}}}
+					</p>
+					<p>
+						{{{translate("Land.Each member of our team brings their own unique skills and experience to the table, and we're proud to have assembled a group of individuals who are passionate about making a difference in the real estate world. Whether you're looking to buy your dream home, sell your property, or invest in the real estate market, our team is here to help.")}}}
+					</p>
+					<p>
+						{{{translate("Land.Take a moment to get to know the members of our team and see why Neryxomka is the real estate platform you can trust.")}}}
+					</p>
+				</div>
+				<div class="about-us__btn">
+					<a href="/team" class="btn">
+						{{{translate("Land.MEET THE TEAM")}}}
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="l-estate">
+			<div class="container">
+				<div class="l-estate__main-title global-title">
+					BUY <span>ESTATE</span>
+				</div>
+				<div class="product__list">
+					{% for realestate in topRealestates %}
+					<div class="product__wrap">
+						<div class="product__item">
+							<div class="product__img">
+								<img src="{{{realestate.thumb}}}" alt="{{{realestate.name}}}" />
+							</div>
+							<div class="product__title">
+								{{{realestate.name}}}
+							</div>
+							<pre class="product__description">{{{realestate.description}}}</pre>
+							<div class="product__area-wrap">
+								<div class="product__area-img">
+									<img src="/template/img/icons/area.svg" alt="">
+								</div>
+								<div class="product__area-text">
+									1212.21312312КМ2
+								</div>
+							</div>
+							<div class="product__price-wrap">
+								<div class="product__price-img">
+									<img src="/template/img/icons/price.svg" alt="">
+								</div>
+								<div class="product__price-text">
+									1212.21312312КМ2
+								</div>
+							</div>
+							<div class="product__btn-wrap">
+								<a href="/realestate/{{{realestate.id}}}"
+									class="product__btn-heart product__btn-heart--first">
+									<span>OPEN</span>
+								</a>
+								<a href="" class="product__btn-heart product__btn-heart--second">
+									<img src="/template/img/icons/cart.svg" alt="" />
+								</a>
+								<a href="" class="product__btn-heart">
+									<img src="/template/img/icons/heart.svg" alt="" />
+								</a>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+	</div>
+</div>
+</div>
+</section>
+<section class="l-product">
+	<div class="container">
+		<div class="l-estate__main-title global-title">
+			BUY <span>PRODUCTS</span>
+		</div>
+		<div class="product__list">
+			{% for product in topProducts %}
+			<div class="product__wrap">
+				<div class="product__item">
+					<div class="product__img">
+						<img src="{{{product.thumb}}}" alt="{{{product.name}}}" />
+					</div>
+					<div class="product__title">
+						{{{product.name}}}
+					</div>
+					<pre class="product__description">{{{product.description}}}</pre>
+					<div class="product__btn-wrap">
+						<a href="/product/{{{product.url || product.id}}}"
+							class="product__btn-heart product__btn-heart--first">
+							<span>OPEN</span>
+						</a>
+						<a href="" class="product__btn-heart product__btn-heart--second">
+							<img src="/template/img/icons/cart.svg" alt="" />
+						</a>
+						<a href="" class="product__btn-heart">
+							<img src="/template/img/icons/heart.svg" alt="" />
+						</a>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<div class="photo-wrap">
+	<section class="portfolio">
+		<div class="container">
+			<div class="portfolio__title global-title">
+				OUR <span>PORTFOLIO</span>
+			</div>
+			{% for portfolio in topPortfolios %}
+			<div class="portfolio__wrap{% if loop.first %} show{% endif %}">
+				<div class="portfolio__slider-wrap">
+					<div class="portfolio__slider">
+						<div class="portfolio__slider-img">
+							{% for thumb in portfolio.thumbs %}
+							<a href="">
+								<img src="{{{portfolio.thumb}}}" alt="{{{portfolio.name}}}" />
+							</a>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+				<div class="portfolio__text">
+					<div class="portfolio__subtitle">
+						{{{portfolio.name}}}
+					</div>
+					<div class="portfolio__desrtiption">
+						{{{portfolio.short}}}
+					</div>
+					<a href="" class="btn portfolio__btn">
+						WATCH PORTFOLIOS
+					</a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+	<section class="l-article">
+		<div class="container">
+			<div class="global-title articles__land-title">
+				OUR <span>ARTICLES</span>
+			</div>
+			<div class="articles__list">
+				{% for article in topArticles %}
+				<a class="articles__wrap" href="/article/{{{article.id}}}">
+					<div class="articles__item">
+						<div class="articles__img">
+							<img src="{{{article.thumb}}}" alt="{{{article.name}}}" />
+						</div>
+						<div class="articles__title">{{{article.name}}}</div>
+					</div>
+				</a>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+</div>
+<section class="partners">
+	<div class="container">
+		<div class="partners__main-title global-title">
+			OUR <span>PARTNERS</span>
+		</div>
+		<div class="partners__list">
+			{% for store in stores %}
+			<div class="partners__wrap">
+				<div class="partners__item">
+					<div class="partners__img">
+						<img src="{{{store.thumb}}}" alt="{{{store.name}}}" />
+					</div>
+					<div class="partners__text">
+						<div class="partners__title">
+							{{{store.name}}}
+						</div>
+						<div class="partners__desription">
+							{{{store.description}}}
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<!--	
+		<section class="download">
+			<div class="container">
+				<div class="download__wrap">
+					<div class="download__text">
+						<div class="download__title global-title">
+							{{{translate("Land.USE OUR")}}} <span>{{{translate("Land.APP")}}}</span>
+						</div>
+						<div class="download__description">
+							{{{translate("Land.If you're looking for a convenient, personalized, and fast way to access information and perform tasks related to real estate, then the Neryxomka mobile app is the way to go. Our app provides a seamless experience that is designed to make your life easier, no matter where you are. With the Neryxomka app, you can access the latest properties, get personalized recommendations, and perform common tasks like searching for properties or making payments with just a few taps. Plus, our app offers offline functionality, so you can access certain features and information even when you're not connected to the internet.")}}}
+
+							{{{translate("Land.The Neryxomka app also offers a faster and more responsive experience, with quicker load times and smoother transitions between screens. And, with better integration with your mobile device's features, such as the camera or GPS, you'll get a more immersive experience. And, with push notifications, you'll never miss a beat. Our app is also designed to be fun and engaging, with gamification elements such as rewards, achievements, and leaderboards.")}}}
+
+							{{{translate("Land.So why settle for a website when you can have all this and more at your fingertips with the Neryxomka mobile app? Download it now and experience the power of real estate, wherever you are!")}}}
+						</div>
+						<div class="download__btn">
+							<a href="" class="btn">
+								<img src="template/img/icons/load.svg" alt="">
+								<span>ANDROID</span>
+							</a>
+							<a href="" class="btn">
+								<img src="template/img/icons/load.svg" alt="">
+								<span>IOS</span>
+							</a>
+						</div>
+					</div>
+					<div class="download__img">
+						<img src="/template/img/load.png" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+		-->
+</div>
+{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>
