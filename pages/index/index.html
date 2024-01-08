@@ -215,12 +215,9 @@
 				<div class="portfolio__slider-wrap">
 					<div class="portfolio__slider">
 						<div class="portfolio__slider-img">
-							{% for thumb in portfolio.thumbs %}
-							<a href="">
 								<img src="{{{portfolio.thumb}}}" alt="{{{portfolio.name}}}" />
-							</a>
-							{% endfor %}
 						</div>
+						<img src="{{{portfolio.thumbs}}}" alt="{{{portfolio.name}}}" />
 					</div>
 				</div>
 				<div class="portfolio__text">
@@ -230,7 +227,7 @@
 					<div class="portfolio__desrtiption">
 						{{{portfolio.short}}}
 					</div>
-					<a href="" class="btn portfolio__btn">
+					<a href="/portfolio/{{{portfolio.id}}}" class="btn portfolio__btn">
 						WATCH PORTFOLIOS
 					</a>
 				</div>
