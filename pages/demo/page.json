@@ -160,6 +160,26 @@
 			"url": "/article"
 		}
 	],
+	"plans": [
+		{
+			"id": "/plan",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet",
+			"name": "plan name"
+		},
+		{
+			"id": "/plan",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet",
+			"name": "plan name"
+		},
+		{
+			"id": "/plan",
+			"price": 1200,
+			"short": "Lorem ipsum dolor sit amet",
+			"name": "plan name"
+		}
+	],
 	"agents":[
 		{
 			"id":" ",
