@@ -1,3 +1,31 @@
+<script type="module">
+	import Demo from '/api/wjst/demo';
+	import Dom from '/api/wjst/dom';
+
+function createDemo(event) {
+    event.preventDefault(); 
+
+    var nameUser = document.getElementById('name').value;
+    var numberUser = document.getElementById('number').value;
+    var emailUser = document.getElementById('email').value;
+    var descriptionUser = document.getElementById('description').value;
+
+    var demoObject = {
+        name: nameUser,
+        number: numberUser,
+        email: emailUser,
+        description: descriptionUser
+    };
+	console.log(demoObject)
+
+    // Ваша логіка обробки даних
+    Demo.create(demoObject); 
+    console.log("Дані було успішно відправлено!");
+}
+
+document.getElementById('demoForm').addEventListener('submit', createDemo);
+</script>
+
 <div class="wrapper">
 	<div class="content">
 		<div class="first-screen header__top">
@@ -293,60 +321,32 @@
 	</div>
 <div class="slider-container">
    <div class="slider-content">
+	{% for plan in plans %}
 	  <div class="slide">
-	<div class="slide_text">Minor Sponsor</div>
-	<div class="slide_text">500$ <br />per month</div>
-	<div class="slide_text">Hire Part Time Developer</div>
+	<div class="slide_text">{{{plan.name}}}</div>
+	<div class="slide_text">{{{plan.price}}} <br />per month</div>
+	<div class="slide_text">{{{plan.short}}}</div>
 	<button>Start</button>
 	</div>
-	  <div class="slide">
-	<div class="slide_text">Minor Sponsor</div>
-	<div class="slide_text">2000$ <br />per month</div>
-	<div class="slide_text">Hire Full Time Developer</div>
-	<button>Start</button>
-	</div>
-	<div class="slide">
-	<div class="slide_text">Partner</div>
-	<div class="slide_text">Donation </div>
-	<div class="slide_text">Add Feature</div>
-	<button>Donate</button>
-	</div>
-	<div class="slide">
-	<div class="slide_text">Minor Sponsor</div>
-	<div class="slide_text">500$ <br />per month</div>
-	<div class="slide_text">Hire Part Time Developer</div>
-	<button>Start</button>
-	</div>
-	  <div class="slide">
-	<div class="slide_text">Minor Sponsor</div>
-	<div class="slide_text">2000$ <br />per month</div>
-	<div class="slide_text">Hire Full Time Developer</div>
-	<button>Start</button>
-	</div>
-	<div class="slide">
-	<div class="slide_text">Partner</div>
-	<div class="slide_text">Donation </div>
-	<div class="slide_text">Add Feature</div>
-	<button>Donate</button>
+	{% endfor %}
 	</div>
 </div>
 </div>
 </div>
 
 <div class="container">
-    <form class="meeting">
+    <form class="meeting" id="demoForm">
         <label for="name">Your name:</label><br>
         <input type="text" id="name" name="name"><br><br>
         <label for="number">Your number:</label><br>
         <input type="number" id="number" name="number"><br><br>
         <label for="email">Your email:</label><br>
         <input type="email" id="email" name="email"><br><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-        <button type="submit" value="Submit">Submit</button>
-      </form>
-    </div>
-</section>
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+        <button id="submitButton" type="submit">Створити Demo</button>
+    </form>
+</div>
 
 <!-- <section class="partners">
 	<div class="container">
